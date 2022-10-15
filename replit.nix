@@ -1,5 +1,8 @@
 { pkgs }: {
 	deps = [
-		pkgs.php74
+    pkgs.busybox
+    pkgs.php74
+    pkgs.less
+    pkgs.wp-cli
 	];
 }

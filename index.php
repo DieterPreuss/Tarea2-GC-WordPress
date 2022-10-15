@@ -1,15 +1,17 @@
-<html>
-  <head>
-    <title>PHP Test</title>
-  </head>
-  <body>
-    <?php echo '<p>Hello World</p>'; ?> 
+<?php
+/**
+ * Front to the WordPress application. This file doesn't do anything, but loads
+ * wp-blog-header.php which does and tells WordPress to load the theme.
+ *
+ * @package WordPress
+ */
 
-    <!--
-    This script places a badge on your repl's full-browser view back to your repl's cover
-    page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
-    teal, blue, blurple, magenta, pink!
-    -->
-    <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
-  </body>
-</html>
+/**
+ * Tells WordPress to load the WordPress theme and output it.
+ *
+ * @var bool
+ */
+define( 'WP_USE_THEMES', true );
+
+/** Loads the WordPress Environment and Template */
+require __DIR__ . '/wp-blog-header.php';
