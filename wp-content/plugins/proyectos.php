@@ -150,6 +150,11 @@ function proyectos_metabox_c($post){
     
 }
 
+register_rest_field( 'proyecto', 'meta', array(
+'get_callback' => function ( $data ) {
+    return get_post_meta( $data['id'], '', '' );
+}, ));
+
 add_action( 'save_post', 'proyectos_metabox_save' );
 
 function proyectos_metabox_save($post_id){
